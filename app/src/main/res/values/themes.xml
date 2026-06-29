@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.JOHNCALCULATOR" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.JOHNCALCULATOR" parent="Base.Theme.JOHNCALCULATOR" />
+    <style name="CalcButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:backgroundTint">#2C2C2C</item>
+        <item name="android:textColor">#E0E0E0</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="CalcButtonNum" parent="CalcButton">
+        <item name="android:backgroundTint">#3A3A3A</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

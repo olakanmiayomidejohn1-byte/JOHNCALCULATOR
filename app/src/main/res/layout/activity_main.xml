@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/displayLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="bottom|end"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/keypadLayout"
+        app:layout_constraintHeight_percent="0.35"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:id="@+id/tv_expression"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:maxLines="2"
+            android:text=""
+            android:textColor="#AAAAAA"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="end"
+            android:maxLines="1"
+            android:text="0"
+            android:textColor="#FFFFFF"
+            android:textSize="54sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/keypadLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="8dp"
+        app:layout_constraintHeight_percent="0.65"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/displayLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <Button android:id="@+id/btn_sin" style="@style/CalcButton" android:text="sin" />
+            <Button android:id="@+id/btn_cos" style="@style/CalcButton" android:text="cos" />
+            <Button android:id="@+id/btn_tan" style="@style/CalcButton" android:text="tan" />
+            <Button android:id="@+id/btn_clear" style="@style/CalcButton" android:text="C" android:textColor="#FF5252" />
+            <Button android:id="@+id/btn_del" style="@style/CalcButton" android:text="DEL" android:textColor="#FF5252" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <Button android:id="@+id/btn_log" style="@style/CalcButton" android:text="log" />
+            <Button android:id="@+id/btn_ln" style="@style/CalcButton" android:text="ln" />
+            <Button android:id="@+id/btn_sqrt" style="@style/CalcButton" android:text="√" />
+            <Button android:id="@+id/btn_power" style="@style/CalcButton" android:text="^" />
+            <Button android:id="@+id/btn_div" style="@style/CalcButton" android:text="÷" android:textColor="#4CAF50" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <Button android:id="@+id/btn_fact" style="@style/CalcButton" android:text="!" />
+            <Button android:id="@+id/btn_7" style="@style/CalcButtonNum" android:text="7" />
+            <Button android:id="@+id/btn_8" style="@style/CalcButtonNum" android:text="8" />
+            <Button android:id="@+id/btn_9" style="@style/CalcButtonNum" android:text="9" />
+            <Button android:id="@+id/btn_mul" style="@style/CalcButton" android:text="×" android:textColor="#4CAF50" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <Button android:id="@+id/btn_open" style="@style/CalcButton" android:text="(" />
+            <Button android:id="@+id/btn_4" style="@style/CalcButtonNum" android:text="4" />
+            <Button android:id="@+id/btn_5" style="@style/CalcButtonNum" android:text="5" />
+            <Button android:id="@+id/btn_6" style="@style/CalcButtonNum" android:text="6" />
+            <Button android:id="@+id/btn_sub" style="@style/CalcButton" android:text="-" android:textColor="#4CAF50" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <Button android:id="@+id/btn_close" style="@style/CalcButton" android:text=")" />
+            <Button android:id="@+id/btn_1" style="@style/CalcButtonNum" android:text="1" />
+            <Button android:id="@+id/btn_2" style="@style/CalcButtonNum" android:text="2" />
+            <Button android:id="@+id/btn_3" style="@style/CalcButtonNum" android:text="3" />
+            <Button android:id="@+id/btn_add" style="@style/CalcButton" android:text="+" android:textColor="#4CAF50" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+            <Button android:id="@+id/btn_npr" style="@style/CalcButton" android:text="nPr" android:textSize="18sp"/>
+            <Button android:id="@+id/btn_ncr" style="@style/CalcButton" android:text="nCr" android:textSize="18sp"/>
+            <Button android:id="@+id/btn_0" style="@style/CalcButtonNum" android:text="0" />
+            <Button android:id="@+id/btn_dot" style="@style/CalcButtonNum" android:text="." />
+            <Button android:id="@+id/btn_eq" style="@style/CalcButton" android:text="=" android:backgroundTint="#4CAF50" android:textColor="#FFFFFF" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
